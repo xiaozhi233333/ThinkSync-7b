@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 训练产物（不入库）
+train/
+*.log
+logs/
+
+# 模型文件（只保留 adapter/ 下的 LoRA，不入库基座和中间权重）
+base/
+*.gguf
+*.safetensors
+!adapter/*.safetensors
+checkpoint-*/
+
+# 数据（训练数据按需自行准备）
+data/*.jsonl
+
+# 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
